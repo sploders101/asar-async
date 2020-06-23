@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"module": "commonjs",
+		"resolveJsonModule": true,
+		"target": "esnext",
+		"strictBindCallApply": true,
+		"esModuleInterop": true,
+		"baseUrl": ".",
+		"rootDir": "src",
+		"declaration": true,
+		"types": [
+			"node"
+		],
+		"outDir": "dist"
+	},
+	"include": [
+		"**/*.ts",
+		"**/*.d.ts"
+	]
+}
