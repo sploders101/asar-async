@@ -1,6 +1,9 @@
 # async-asar
 
 This library creates a class-based interface for reading and streaming asar files from any location.
+By default, it can read from the filesystem or HTTP/HTTPS using the built-in backends.
+However, it allows you to write your own backend using request functions, which only load parts of the file into memory.
+This module does not require any dependencies, and has been split out into different files of varying complexity to keep it lightweight and versatile.
 All of the code has been documented and commented, with typings provided.
 
 ## File Structure
