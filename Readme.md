@@ -8,13 +8,15 @@ All of the code has been documented and commented, with typings provided.
 
 ## File Structure
 
-### `index` (contains `EasyAsar`)
+### Readers
+
+#### `index` (contains `EasyAsar`)
 Defines the EasyAsar class that you will most likely use. This extends the `streams` implementation to allow the use of filesystem, HTTP, and HTTPS backends by default. Simply provide a file path or URL to the constructor.
 
-### `streams` (contains `AsarStreams`)
+#### `streams` (contains `AsarStreams`)
 This defines the streaming implementation of the asar reader, extending upon the base to allow streaming a file from the archive.
 
-### `base` (contains `AsarArchive`)
+#### `base` (contains `AsarArchive`)
 This defines the base implementation of the asar reader, usable in the browser via a Buffer polyfill.
 
 
