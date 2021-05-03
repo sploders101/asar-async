@@ -1,20 +1,10 @@
-/**
- * The type that an asar index's directories follow
- */
-export interface AsarIndex {
-	files: {
-		[key: string]: AsarIndex | AsarFile;
-	};
-}
-
-/**
- * The type that an asar index's files follow
- */
-export interface AsarFile {
-	offset: string;
-	size: number;
-	executable?: boolean;
-}
+import {
+	AsarIndex,
+	AsarFile,
+} from "src/common/types";
+import {
+	isFolder,
+} from "src/common/functions";
 
 /**
  * Function type for an AsarArchive getter.
@@ -99,10 +89,6 @@ export default class AsarArchive {
 		const offset = this[dataOffset] + Number(fileIndex.offset);
 		return await this[getter](offset, fileIndex.size);
 	}
-}
-
-export function isFolder(fileIndex: AsarIndex | AsarFile): fileIndex is AsarIndex {
-	return !!(fileIndex as any).files;
 }
 
 export function fsErr(msg: string, code: string, errno: number, syscall: string) {
