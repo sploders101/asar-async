@@ -9,7 +9,7 @@
 	},
 	"repository": "https://github.com/sploders101/async-asar.git",
 	"author": "Shaun Keys <mariobuddy@gmail.com>",
-	"license": "MIT",
+	"license": "Unlicense",
 	"private": false,
 	"devDependencies": {
 		"@types/node": "^14.0.13",
